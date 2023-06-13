@@ -1,6 +1,6 @@
 import pygame
 
-#============= Estados para a troca de telas =============#
+# Estados para a troca de telas 
 INIT = 0
 MUSICA = 1
 GAME = 2
@@ -9,7 +9,7 @@ QUIT = 4
 PERDEU = 5
 RANKING = 6
 
-#======= variáveis e dimensões =======#
+# Variáveis e dimensões
 width = 1920
 height = 1080
 
@@ -38,6 +38,5 @@ fontMedia = pygame.font.Font('assets/font/RetroMario-Regular.otf', 50)
 fontGrande = pygame.font.Font('assets/font/RetroMario-Regular.otf', 80)
 fontPequena = pygame.font.Font('assets/font/RetroMario-Regular.otf', 25)
 
-#========== Dicionário com o tempo de parada para as musicas ==========#
+# Dicionário com o tempo de parada para as músicas 
 dicio = {'assets/musicas/maracatu_atomico.mp3':30, 'assets/musicas/risoflora.mp3':30, 'assets/musicas/a_praieira.mp3':30}
-

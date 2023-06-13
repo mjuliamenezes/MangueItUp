@@ -1,4 +1,4 @@
-######### importando bibliotecas #########
+# Importando bibliotecas
 import pygame
 import random
 from sprites import *
@@ -8,23 +8,21 @@ from selecao_musica import cardapio
 def game(window):
     lista = cardapio(window)
 
-    #======= condições =======#
+    # Condições 
     game = True
     inicio = True
 
-    #======= variaveis =======#
+    # Variáveis 
     player_data = {
-        'combo' : 0,
         'acertos' : 0,
         'erros' : 0, 
         'notas' : 0
     }
-    combo = 0
     clock = pygame.time.Clock()
 
-    #======= janela =======#
+    # Tela
     window = pygame.display.set_mode((width, height))
-    pygame.display.set_caption('Guitar Hero')
+    pygame.display.set_caption('Mangue It Up')
     window.fill((0,0,0))
 
 
@@ -35,8 +33,8 @@ def game(window):
         'direita' : [direita,(1185, 225), pygame.K_RIGHT],
     }
   
-    #======= dicionarios =======#
-            #== dados das teclas ==#
+    # Dicionários
+        # Dados das teclas 
 
     assets = {
         'notas' : {
@@ -100,13 +98,10 @@ def game(window):
                     if nota.rect.y+2*nota.radius>tecla.posi[1]-tecla.radius and nota.rect.y<tecla.posi[1]+tecla.radius and esqpress:
                         player_data['acertos']+=1
                         nota.remove()
-                        player_data['combo']+=1
                         mensagem = True
                     else:
                         player_data['erros'] +=1
                         mensagem = False
-                        if combo>player_data['combo']:
-                            player_data['combo'] = combo
                 
                 if event.key == pygame.K_UP:
                     dados_teclas['cima'][0] = branco
@@ -114,13 +109,10 @@ def game(window):
                     if nota.rect.y+2*nota.radius>tecla.posi[1]-tecla.radius and nota.rect.y<tecla.posi[1]+tecla.radius and cimapress:
                         player_data['acertos']+=1
                         nota.remove()
-                        player_data['combo']+=1
                         mensagem = True
                     else:
                         player_data['erros'] +=1
                         mensagem = False
-                        if combo>player_data['combo']:
-                            player_data['combo'] = combo
                 
                 if event.key == pygame.K_DOWN:
                     dados_teclas['baixo'][0] = branco
@@ -128,13 +120,10 @@ def game(window):
                     if nota.rect.y+2*nota.radius>tecla.posi[1]-tecla.radius and nota.rect.y<tecla.posi[1]+tecla.radius and baixopress:
                         player_data['acertos'] += 1
                         nota.remove()
-                        player_data['combo']+=1
                         mensagem = True
                     else:
                         player_data['erros'] +=1
                         mensagem = False
-                        if combo>player_data['combo']:
-                            player_data['combo'] = combo
 
                 if event.key == pygame.K_RIGHT:
                     dados_teclas['direita'][0] = branco
@@ -142,13 +131,10 @@ def game(window):
                     if nota.rect.y+2*nota.radius>tecla.posi[1]-tecla.radius and nota.rect.y<tecla.posi[1]+tecla.radius and dirpress:
                         player_data['acertos'] +=1
                         nota.remove()
-                        player_data['combo']+=1
-                        mensagem = True                    
+              
                     else:
                         player_data['erros'] +=1
                         mensagem = False
-                        if combo>player_data['combo']:
-                            player_data['combo'] = combo
 
             if event.type == pygame.KEYUP:
                 if inicio:
@@ -183,14 +169,9 @@ def game(window):
         
         mensagem_acerto = fontMedia.render("ARRETADO!", True, branco)
         mensagem_erro = fontMedia.render("VIXE!", True, branco) 
-        if player_data['acertos'] < 10:
-            ponto_combo = fontPequena.render(f"0{str(player_data['acertos'])}", True, branco)
-        else: 
-            ponto_combo = fontPequena.render(f"{str(player_data['acertos'])}", True, branco)
 
         window.blit(cenario,(0,0))
         window.blit(nota.image, nota.rect)
-        window.blit(ponto_combo, (945,870))
 
         if mensagem == True and player_data['acertos']!=0:
             window.blit(mensagem_acerto, (820,170))
