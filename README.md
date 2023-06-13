@@ -1,6 +1,5 @@
 ## Mangue It Up - Jogo de Ritmo
 
-
 ## Descrição
 Bem-vindo ao Mangue It Up, um jogo de ritmo empolgante que combina elementos do MangueBeat, da cultura pernambucana e dos patrimônios culturais. Você precisa seguir as setas e os passos no ritmo da música. Prepare-se para mostrar seus melhores movimentos!
 
