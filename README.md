@@ -10,14 +10,16 @@ Bem-vindo ao Mangue It Up, um jogo de ritmo empolgante que combina elementos do 
 4. Execute o comando ‘pip install -r requirements.txt’ para instalar as dependências do jogo. Nesse arquivo, conterá a biblioteca Pygame (versão 2.4.0 ou superior).
 
 ## Como Jogar
-1. Execute o arquivo ‘main.py’ para iniciar o jogo.
-2. Será exibida uma tela inicial e você poderá apertar qualquer uma das setas para iniciar a escolha das músicas.
-3. Selecione uma música disponível no menu de seleção e aperte no botão esquerdo do mouse em cima para escolher.
-4. No ritmo da música, as setas serão exibidas na tela.
-5. No momento certo, utilize as setas do teclado para acertar os passos de dança.
-6. Acerte o máximo de setas possível para ganhar pontos e obter uma pontuação alta.
-7. Acompanhe sua pontuação e desempenho no painel de resultados ao final da música.
-8. Se desejar retornar à tela inicial, pressione Esc. Mas se deseja jogar novamente, pressione Enter.
+1. Execute o arquivo ‘telas.py’ para iniciar o jogo.
+2. Você deve inserir o seu nome terminal e apertar Enter para iniciar o jogo.
+3. Será exibida uma tela inicial e você poderá apertar qualquer uma das setas para iniciar a escolha das músicas.
+4. Selecione uma música disponível no menu de seleção.
+5. No ritmo da música, as setas serão exibidas na tela.
+6. No momento certo, utilize as setas do teclado para acertar os passos de dança.
+7. Acerte o máximo de setas possível para ganhar pontos e obter uma pontuação alta.
+8. Acompanhe sua pontuação e desempenho no painel de resultados ao final da música.
+9. Apertando a Seta Direita, você poderá visualizar o ranking com os cinco melhores resultados.
+10. Se desejar retornar à tela inicial, pressione a Seta Direita. Mas se desejar sair do jogo, pressione Esc.
 
 ## Requisitos do Sistema
 - Python (versão 3.11.2 ou superior)
