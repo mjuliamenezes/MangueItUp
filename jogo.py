@@ -24,7 +24,7 @@ def game(window):
 
     # Janela
     window = pygame.display.set_mode((width, height))
-    pygame.display.set_caption('Guitar Hero')
+    pygame.display.set_caption('Mangue It Up')
     window.fill((0,0,0))
 
 
